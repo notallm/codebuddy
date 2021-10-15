@@ -13,7 +13,7 @@
     </a>
 </p>
 
-<h1 align = "center"><a href = "https://pypi.org/project/codebuddy/">CodeBuddy <code>v0.0.1</code></a></h1>
+<h1 align = "center"><a href = "https://pypi.org/project/codebuddy/">CodeBuddy <code>v0.0.2</code></a></h1>
 <h3 align = "center">stack overflow search on exception</h3>
 
 # Overview

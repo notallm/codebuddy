@@ -7,7 +7,7 @@ requirements = (code / "requirements.txt").read_text().split("\n")
 
 setup(
     name = "codebuddy",
-    version = "v0.0.1",
+    version = "v0.0.2",
     description = "stack overflow search on exception",
     long_description = readme,
     long_description_content_type = "text/markdown",
