@@ -3,6 +3,7 @@ from pathlib import Path
 
 code = Path(__file__).parent
 readme = (code / "README.md").read_text()
+requirements = (code / "requirements.txt").read_text().split("\n")
 
 setup(
     name = "codebuddy",
@@ -21,5 +22,5 @@ setup(
     ],
     packages = ["codebuddy"],
     package_data = {},
-    install_requires = []
+    install_requires = requirements
 )
