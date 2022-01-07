@@ -11,7 +11,7 @@ setup(
     description = "stack overflow search on exception",
     long_description = readme,
     long_description_content_type = "text/markdown",
-    url = "https://github.com/0x44RU5H/codebuddy",
+    url = "https://theaarushgupta.com/work/codebuddy",
     author = "Aarush Gupta",
     author_email = "aarush@theaarushgupta.com",
     license = "AGPLv3+",
