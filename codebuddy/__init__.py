@@ -1,11 +1,10 @@
 from codebuddy.core import CodeBuddyCore
 
-def codebuddy(function, arguments: list = None) -> None:
+from typing import Any
+
+def codebuddy(function, *arguments: Any) -> None:
     try:
-        if arguments == None:
-            function()
-        else:
-            exec(f"function{tuple(arguments)}")
+        function(*arguments)
     except Exception:
         core = CodeBuddyCore(function)
         core.entry()

@@ -3,6 +3,8 @@ from traceback import format_exc
 
 from html import unescape
 
+from os import get_terminal_size
+
 from codebuddy.helper import *
 from codebuddy.stackAPI import StackAPI
 
@@ -21,13 +23,19 @@ class CodeBuddyCore:
         api = StackAPI()
         results = api.search(filteredSearch)
         # formatting results
-        error = f"{type_.__name__}: {searchable}"
-        userInformation = f"Exception caught by CodeBuddy: {type_.__name__}"
+        width = get_terminal_size().columns
+        alert = f"""\
+{'=' * width}
+Exception of type {type_.__name__} caught by CodeBuddy
+{'=' * width}
+
+{'=' * width}
+Possible Solutions
+{'=' * width}
+"""
         print(traceback)
-        print("=" * len(userInformation) + "\n")
-        print(userInformation)
-        print("-" * len(userInformation))
-        print("\nStack Overflow search results:\n")
+        print(alert)
+        print("-" * width)
         for indice in range(len(results)):
             result = results[indice]
             title = result["title"]
@@ -37,10 +45,12 @@ class CodeBuddyCore:
             else:
                 description = description.split("\n")[0]
             title = unescape(title)
-            description = unescape(description)
+            description = unescape(description).replace("\n", " ")
             url = result["link"]
-            print(f"{indice + 1}. {title}")
-            print(f"   {description}")
-            print(f"   URL to question: {url}")
-            if indice + 1 < len(results):
-                print()
+            solution = f"""
+{title}
+    {description}
+    URL: {url}
+"""
+            print(solution)
+            print("-" * width)

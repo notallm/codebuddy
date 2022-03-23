@@ -45,16 +45,21 @@ Traceback (most recent call last):
     print(7 + "3")
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
-========================================
+============================================================================================
+Exception of type TypeError caught by CodeBuddy
+============================================================================================
 
-Exception caught by CodeBuddy: TypeError
-----------------------------------------
+============================================================================================
+Possible Solutions
+============================================================================================
 
-Stack Overflow search results:
+--------------------------------------------------------------------------------------------
 
-1. TypeError: unsupported operand type(s) for /: 'int' and 'str'
-   This code isn't working and keeps giving the error message in the title
-   URL to question: https://stackoverflow.com/questions/69506027/typeerror-unsupported-operand-types-for-int-and-str
+Python TypeError: unsupported operand type(s) for +: 'int' and 'str'
+    I Have been working on a project and get the following error: `TypeError: unsupported operand type(s) for +: 'int' and 'str'.`
+    URL: https://stackoverflow.com/questions/29261566/python-typeerror-unsupported-operand-types-for-int-and-str
+
+--------------------------------------------------------------------------------------------
 
 ...
 ```
@@ -71,8 +76,8 @@ from codebuddy import codebuddy
 def main(number: int):
     print(number + "3") # <= that's still illegal
 
-codebuddy(main, arguments = [1]) # executes function as "main(1)"
+codebuddy(main, 1) # executes function as "main(1)"
 ```
 
-# Copyright &copy; 2021 Aarush Gupta
+# Copyright &copy; 2022 Aarush Gupta
 This code is copyrighted but licensed to the public under the GNU AGPLv3 license and any later versions.
