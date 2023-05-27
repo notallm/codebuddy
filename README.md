@@ -1,18 +1,3 @@
-<p align = "center">
-    <a href = "https://opensource.org/licenses/MIT">
-        <img alt = "License" src = "https://img.shields.io/badge/License-AGPLv3-green.svg">
-    </a>
-    <a href = "https://pypi.org/project/codebuddy/">
-        <img alt = "Version" src = "https://img.shields.io/pypi/v/codebuddy.svg">
-    </a>
-    <a href = "https://pypi.org/project/codebuddy/">
-        <img alt = "Downloads" src = "https://img.shields.io/pypi/dm/codebuddy.svg">
-    </a>
-    <a href = "https://pypi.org/project/codebuddy/">
-        <img alt = "Supported Versions" src = "https://img.shields.io/pypi/pyversions/codebuddy.svg">
-    </a>
-</p>
-
 <h1 align = "center"><a href = "https://pypi.org/project/codebuddy/">CodeBuddy <code>v0.0.2</code></a></h1>
 <h3 align = "center">stack overflow search on exception</h3>
 
@@ -79,5 +64,5 @@ def main(number: int):
 codebuddy(main, 1) # executes function as "main(1)"
 ```
 
-# Copyright &copy; 2022 Aarush Gupta
+# Copyright &copy; 2023 Aarush Gupta
 This code is copyrighted but licensed to the public under the GNU AGPLv3 license and any later versions.
