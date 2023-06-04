@@ -1,24 +1,20 @@
-<h1 align = "center"><a href = "https://pypi.org/project/codebuddy/">CodeBuddy <code>v0.0.2</code></a></h1>
-<h3 align = "center">stack overflow search on exception</h3>
+# codebuddy
+stack overflow search on exception
 
-# Overview
+codebuddy is a tool for python programmers. On exceptions, it uses the stack overflow public api to search for 
+top answers and returns them in a neat fashion, along with traceback information for debug information.
 
-`codebuddy` is a tool for python programmers. On exceptions, it uses the stack overflow public api to search for top answers and returns them in a neat fashion, along with traceback information for debug information.
-
-# Examples
-
-## Basic Usage
-
+example: basic usage
 ``` python
 from codebuddy import codebuddy
 
 def main():
-    print(7 + "3") # <= that's illegal
+    print(7 + "3") # throws error
 
-codebuddy(main)
+codebuddy(main) # show codebuddy the entrypoint
 ```
 
-This code returns an error, which `codebuddy` catches and gets stack overflow answers for.
+this code returns an error, which codebuddy catches and gets stack overflow answers for.
 
 ```
 $ python3 main.py
@@ -26,7 +22,7 @@ $ python3 main.py
 Traceback (most recent call last):
   File "/home/aarushgupta/fun/codebuddy/codebuddy/__init__.py", line 6, in codebuddy
     function()
-  File "test.py", line 4, in bob
+  File "main.py", line 6, in main
     print(7 + "3")
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
@@ -49,20 +45,12 @@ Python TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ...
 ```
 
-Very neat indeed! The user also gets the description and url to the question in the results as well.
-
-## Advanced Usage
-
-`codebuddy` also supports arguments
-
+example: function argument support
 ``` python
 from codebuddy import codebuddy
 
 def main(number: int):
-    print(number + "3") # <= that's still illegal
+    print(number + "3")
 
-codebuddy(main, 1) # executes function as "main(1)"
+codebuddy(main, 1) # executes as "main(1)"
 ```
-
-# Copyright &copy; 2023 Aarush Gupta
-This code is copyrighted but licensed to the public under the GNU AGPLv3 license and any later versions.
